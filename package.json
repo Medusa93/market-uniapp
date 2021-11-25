@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "npm run dev:h5",
+    "serve": "npm run dev:mp-weixin",
     "build": "npm run build:h5",
     "build:app-plus": "cross-env NODE_ENV=production UNI_PLATFORM=app-plus vue-cli-service uni-build",
     "build:custom": "cross-env NODE_ENV=production uniapp-cli custom",
@@ -60,10 +60,13 @@
     "@dcloudio/uni-quickapp-native": "^2.0.0-32920211122002",
     "@dcloudio/uni-quickapp-webview": "^2.0.0-32920211122002",
     "@dcloudio/uni-stat": "^2.0.0-32920211122002",
+    "@dcloudio/uni-ui": "^1.4.9",
     "@vue/shared": "^3.0.0",
     "core-js": "^3.6.5",
     "flyio": "^0.6.2",
+    "node-sass": "^4.14.1",
     "regenerator-runtime": "^0.12.1",
+    "sass": "^1.43.4",
     "vue": "^2.6.11",
     "vuex": "^3.2.0"
   },
@@ -88,6 +91,7 @@
     "mini-types": "*",
     "miniprogram-api-typings": "*",
     "postcss-comment": "^2.0.0",
+    "sass-loader": "^7.3.1",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
@@ -96,5 +100,10 @@
   ],
   "uni-app": {
     "scripts": {}
-  }
+  },
+  "description": "## Project setup ``` npm install ```",
+  "main": "babel.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
