@@ -1,7 +1,7 @@
 <template>
   <view class="content">
     <!-- 搜索框 -->
-    <serachInput></serachInput>
+    <search-input></search-input>
     <!-- 轮播图 -->
     <view>
       <swiper class="index_swiper" indicator-dots autoplay circular>
@@ -17,30 +17,34 @@
       </navigator>
     </view>
     <!-- 楼层 -->
-    <view class="index_floot">
+    <view class="index_floor">
       <view
         v-for="(item1, index) in floorList"
         :key="index"
         class="floor_group"
       >
+        <!-- 标题 -->
         <view class="floor_title"
           ><img :src="item1.floor_title.image_src" alt="" mode="widthFix"
         /></view>
-        <navigator v-for="(item2, index) in item1.product_list" :key="index">
-          <img :src="item2.image_src" alt="" mode="widthFix" />
-        </navigator>
+        <!-- 内容 -->
+        <view class="floor_list">
+          <navigator v-for="(item2, index2) in item1.product_list" :key="index2">
+            <img :src="item2.image_src" alt="" :mode="index2 === 0? 'widthFix' : 'scaleToFill'" />
+          </navigator>
+        </view>
       </view>
     </view>
   </view>
 </template>
 
 <script>
-import serachInput from "../../components/serachInput";
+import searchInput from "../../components/searchInput";
 import { request } from "../../utils/request.js";
 // import { uniCalendarm, uniCard } from "@dcloudio/uni-ui";
 export default {
   // components: { uniCalendar, uniCard },
-  components: { serachInput },
+  components: { searchInput },
   data() {
     return {
       // 轮播图数组
@@ -61,29 +65,29 @@ export default {
     // 获取轮播图数据
     getSwiper() {
       // uni.request({
-      //   url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
+      //   url: "/home/swiperdata",
       //   success: (res) => {
-      //     this.swiperList = res.data.message;
+      //     this.swiperList = res;
       //     // console.log(this.swiperList);
       //   },
       // });
       request({
-        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata",
-      }).then((res) => (this.swiperList = res.data.message));
+        url: "/home/swiperdata",
+      }).then((res) => (this.swiperList = res));
     },
     // 获取导航数据
     getNavigator() {
       // uni
       //   .request({
-      //     url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems",
+      //     url: "/home/catitems",
       //   })
       //   .then((res) => {
-      //     this.cateList = res.data.message;
+      //     this.cateList = res;
       //     console.log(this.cateList);
       //   });
       request({
-        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems",
-      }).then((res) => (this.cateList = res.data.message));
+        url: "/home/catitems",
+      }).then((res) => (this.cateList = res));
     },
     // goCate(index) {
     //   const url = "/pages/" + this.nav[index] + "/index";
@@ -95,32 +99,13 @@ export default {
     // 获取楼层数据
     getFloorList() {
       request({
-        url: "https://api-hmugo-web.itheima.net/api/public/v1/home/floordata",
-      }).then((res) => (this.floorList = res.data.message));
+        url: "/home/floordata",
+      }).then((res) => (this.floorList = res));
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.index_swiper {
-  width: 750rpx;
-  height: 340rpx;
-  img {
-    width: 100%;
-  }
-}
-
-.index_cate {
-  display: flex;
-  text-align: center;
-  margin-top: 20rpx;
-  navigator {
-    width: 25%;
-    img {
-      width: 150rpx;
-      height: 150rpx;
-    }
-  }
-}
+@import "./index.scss"
 </style>

@@ -15,49 +15,50 @@
 		{
 			"path": "pages/category/index",
 			"style": {
-				"navigationBarTitleText": "分类"
+				"navigationBarTitleText": "商品分类"				
 			}
 		},
 		{
 			"path": "pages/goods_list/index",
 			"style": {
-				"navigationBarTitleText": "商品列表"
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": true
 			}
 		},
 		{
 			"path": "pages/goods_detail/index",
 			"style": {
-				"navigationBarTitleText": "商品列表"
+				"navigationBarTitleText": "商品详情"
 			}
 		},
 		{
 			"path": "pages/cart/index",
 			"style": {
-				"navigationBarTitleText": "超市购"
+				"navigationBarTitleText": "购物车"
 			}
 		},
 		{
 			"path": "pages/collect/index",
 			"style": {
-				"navigationBarTitleText": "收藏"
+				"navigationBarTitleText": "商品收藏"
 			}
 		},
 		{
 			"path": "pages/order/index",
 			"style": {
-				"navigationBarTitleText": "订单"
+				"navigationBarTitleText": "订单查询"
 			}
 		},
 		{
 			"path": "pages/search/index",
 			"style": {
-				"navigationBarTitleText": "搜索"
+				"navigationBarTitleText": "搜索中心"
 			}
 		},
 		{
 			"path": "pages/user/index",
 			"style": {
-				"navigationBarTitleText": "用户"
+				"navigationBarTitleText": "个人中心"
 			}
 		},
 		{
@@ -69,7 +70,7 @@
 		{
 			"path": "pages/login/index",
 			"style": {
-				"navigationBarTitleText": "登陆"
+				"navigationBarTitleText": "登录"
 			}
 		},
 		{
@@ -81,7 +82,7 @@
 		{
 			"path": "pages/pay/index",
 			"style": {
-				"navigationBarTitleText": "支付"
+				"navigationBarTitleText": "商品支付"
 			}
 		}
 	],
@@ -99,26 +100,26 @@
 		"list": [
 			{
 				"pagePath": "pages/index/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
+				"iconPath": "static/icons/home.png",
+				"selectedIconPath": "static/icons/home-o.png",
 				"text": "主页"
 			},
 			{
 				"pagePath": "pages/category/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
+				"iconPath": "static/icons/category.png",
+				"selectedIconPath": "static/icons/category-o.png",
 				"text": "分类"
 			},
 			{
 				"pagePath": "pages/cart/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
+				"iconPath": "static/icons/cart_20190818_110336.png",
+				"selectedIconPath": "static/icons/cart-o.png",
 				"text": "购物车"
 			},
 			{
 				"pagePath": "pages/user/index",
-				"iconPath": "static/logo.png",
-				"selectedIconPath": "static/logo.png",
+				"iconPath": "static/icons/my.png",
+				"selectedIconPath": "static/icons/my-o.png",
 				"text": "我的"
 			}
 		]
