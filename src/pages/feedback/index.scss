@@ -1,0 +1,57 @@
+page {
+  background-color: #eee;
+}
+
+.fb_main {
+  padding: 10rpx;
+  .fb_title {
+  };
+  .fb_tips {   
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 20rpx;
+    text {
+      width: 28%;
+      margin: 10rpx;
+      padding: 8rpx;
+      background: #fff;
+    }
+  }
+  .fb_content {
+    background: #fff;
+    margin-top: 20rpx;
+    textarea {
+      padding: 20rpx
+    };
+    .fb_tools {
+      padding-bottom: 30rpx;
+      padding-left: 20rpx;
+      display: flex;
+      button {
+        margin: 0;
+        height: 90rpx;
+        width: 90rpx;
+        font-size: 60rpx;
+        color: #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      };
+      .up_Img_item {
+        margin-left: 20rpx
+      }
+    }
+  }
+  .fb_btn {
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 30%;
+      margin: 0;
+      color: #fff;
+      background: $uni-color-theme;
+    };
+  }
+}

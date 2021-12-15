@@ -1,0 +1,15 @@
+.order_item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1rpx solid #eee;
+  padding: 20rpx 0;
+  color: #666;
+  .order_wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 10rpx 20rpx;
+    .order_price {
+      color: $uni-color-theme
+    }
+  }
+}

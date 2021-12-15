@@ -1,4 +1,5 @@
 <script>
+<<<<<<< HEAD
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -14,4 +15,32 @@
 
 <style>
 	/*每个页面公共css */
+=======
+export default {
+  onLaunch: function () {
+    console.log("App Launch");
+  },
+  onShow: function () {
+    console.log("App Show");
+  },
+  onHide: function () {
+    console.log("App Hide");
+  },
+};
+</script>
+
+<style>
+/*每个页面公共css */
+@import "./style/iconfont.css";
+page,
+view,
+swiper,
+navigator {
+  box-sizing: border-box;
+}
+
+scroll-view {
+  height: 100%;
+}
+>>>>>>> main
 </style>

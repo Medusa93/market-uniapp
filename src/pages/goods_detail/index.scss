@@ -1,0 +1,78 @@
+.page {
+  padding-bottom: 90rpx
+}
+swiper {
+  height: 65vw;
+  text-align: center;
+  img {
+    width: 80vw;
+  }
+}
+
+.goods_price {
+  padding: 15rpx;
+  font-size: 40rpx;
+  color: $uni-color-theme
+}
+
+.goods_name_row {
+  padding: 15rpx;
+  display: flex;
+  border-top: 5rpx solid #dedede;
+  border-bottom: 5rpx solid #dedede;
+  .goods_name {
+    flex: 5;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .goods_collect {
+    flex: 1;
+    border-left: 5rpx solid #000;
+    text-align: center
+  }
+}
+
+.goods_info {
+  .goods_title {
+    font-size: 40rpx;
+    font-weight: 600;
+    color: $uni-color-theme;
+    padding: 30rpx
+  }
+}
+
+.btm_tools {
+  height: 90rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  border-top: 5rpx solid #ccc;
+  .tools_item {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+  };
+  .btn-cart {
+    flex: 2;
+    font-size: 30rpx;
+    color:#fff;
+    background: $uni-color-warning;
+  };
+  .btn-buy {
+    flex: 2;
+    font-size: 30rpx;
+    color:#fff;
+    background: $uni-color-theme;
+  }
+}
+
+.icon-shoucang1 {
+  color: orange
+}
