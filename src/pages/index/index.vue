@@ -6,13 +6,15 @@
     <view>
       <swiper class="index_swiper" indicator-dots autoplay circular>
         <swiper-item v-for="item in swiperList" :key="item.goods_id">
-          <img :src="item.image_src" alt="" mode="widthFix" />
+          <navigator :url="['/pages/goods_detail/index?goods_id=' + item.goods_id]">
+            <img :src="item.image_src" alt="" mode="widthFix" />
+          </navigator>
         </swiper-item>
       </swiper>
     </view>
     <!-- 导航栏 -->
     <view class="index_cate">
-      <navigator v-for="(item, index) in cateList" :key="index">
+      <navigator url="/pages/category/index" v-for="(item, index) in cateList" :key="index" open-type="switchTab">
         <img :src="item.image_src" alt="" mode="widthFix" />
       </navigator>
     </view>
@@ -29,7 +31,7 @@
         /></view>
         <!-- 内容 -->
         <view class="floor_list">
-          <navigator v-for="(item2, index2) in item1.product_list" :key="index2">
+          <navigator url="/pages/goods_list/index?query=服饰" v-for="(item2, index2) in item1.product_list" :key="index2">
             <img :src="item2.image_src" alt="" :mode="index2 === 0? 'widthFix' : 'scaleToFill'" />
           </navigator>
         </view>
@@ -64,27 +66,12 @@ export default {
   methods: {
     // 获取轮播图数据
     getSwiper() {
-      // uni.request({
-      //   url: "/home/swiperdata",
-      //   success: (res) => {
-      //     this.swiperList = res;
-      //     // console.log(this.swiperList);
-      //   },
-      // });
       request({
         url: "/home/swiperdata",
       }).then((res) => (this.swiperList = res));
     },
     // 获取导航数据
     getNavigator() {
-      // uni
-      //   .request({
-      //     url: "/home/catitems",
-      //   })
-      //   .then((res) => {
-      //     this.cateList = res;
-      //     console.log(this.cateList);
-      //   });
       request({
         url: "/home/catitems",
       }).then((res) => (this.cateList = res));

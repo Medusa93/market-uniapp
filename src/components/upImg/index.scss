@@ -1,0 +1,13 @@
+.upImg_item {
+  position: relative;
+  img {
+    width: 90rpx;
+    height: 90rpx;
+  }
+
+  icon {
+    position: absolute;
+    top: -22rpx;
+    right: -22rpx
+  }
+}

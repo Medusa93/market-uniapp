@@ -163,7 +163,7 @@ export default {
           mask: true,
         });
       } else {
-        // 没有收藏过       
+        // 没有收藏过   
         collect.push(this.goodsInfo);
         this.isCollect = true;
         uni.showToast({

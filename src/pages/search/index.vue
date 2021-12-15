@@ -2,7 +2,7 @@
   <view class="page">
     <view class="search_row">
       <input type="text" v-model="inputValue" placeholder="请输入您想搜索的商品" @input="handleInput" />
-      <button :hidden="!isFocus" @click="cancel">取消</button>
+      <button :hidden="!isFocus" @click="handleCancel">取消</button>
     </view>
     <view class="search_content" >
       <navigator :url="'/pages/goods_detail/index?goods_id=' + item.goods_id" v-for="item in goods" :key="item.goods_id"  class="search_item">
@@ -53,7 +53,7 @@ export default {
       this.goods = res
     },
     // 点击取消按钮
-    cancel() {
+    handleCancel() {
       this.inputValue = ""
       this.isFocus = false      
       this.goods = []
