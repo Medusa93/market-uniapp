@@ -62,7 +62,6 @@ export default {
     // 获取商品goods_id
     const { goods_id } = options;
     this.getGoodsDetail(goods_id);
-    console.log(goods_id);
   },
   onShow(options) {
   },
@@ -101,12 +100,12 @@ export default {
         ".jpg"
       );
       this.goodsInfo = this.goodsObj;
-      console.log(res);
+      // console.log(res);
       //1.获取缓存中的商品收藏数组
       let collect = uni.getStorageSync("collect") || [];
       //2.判断当前商品是否被收藏
-      this.isCollect = collect.some((v) => {
-        v.goods_id === this.goodsInfo.goods_id;
+      this.isCollect = collect.some(v => {
+        return v.goods_id === this.goodsInfo.goods_id;      
       });
     },
     // 点击图片预览
